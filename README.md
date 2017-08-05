@@ -2,7 +2,7 @@
 
 A collection of .htaccess rules which make your WordPress setup more secure without having to use any 3rd party plugin or service.
 
-### Add security headers
+## Add security headers
 ``` apacheconf
 Header always set X-Xss-Protection "1; mode=block"
 Header set X-Content-Type-Options "nosniff"
@@ -11,7 +11,22 @@ Header set Strict-Transport-Security "max-age=631138519; includeSubDomains"
 Header always set Referrer-Policy "no-referrer-when-downgrade"
 ```
 
-### Block bruteforcing through xml-rpc
+## Block bruteforcing through xml-rpc
 ``` apacheconf
 RewriteRule ^xmlrpc.php$ "http://0.0.0.0/" [R=301,L]
+```
+
+## Deny public access to .htaccess
+``` apacheconf
+<files .htaccess>
+order allow,deny
+deny from all
+</files>
+```
+
+## Deny public access to wp-config.php
+``` apacheconf
+<files wp-config.php>
+order allow,deny
+deny from all
 ```
