@@ -9,7 +9,9 @@ Header set X-Content-Type-Options "nosniff"
 Header always set X-Frame-Options "DENY"
 Header set Strict-Transport-Security "max-age=631138519; includeSubDomains"
 Header always set Referrer-Policy "no-referrer-when-downgrade"
+```
 
 ### Block bruteforcing through xml-rpc
 ``` apacheconf
 RewriteRule ^xmlrpc.php$ "http://0.0.0.0/" [R=301,L]
+```
