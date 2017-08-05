@@ -48,4 +48,4 @@ RewriteRule . http://%{SERVER_NAME}/? [L]
 
 Curators
 ========
-Brough to you by the Support Team at [FixMyWP](https://fixmywp.com)
+Brought to you by the Support Team at [FixMyWP](https://fixmywp.com)
